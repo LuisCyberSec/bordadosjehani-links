@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bordados Jehani | Enlaces</title>
+  <meta name="description" content="Bordados Jehani: WhatsApp, reseñas, Instagram y ubicación." />
+  <style>
+    :root{
+      --bg:#0b0f19; --card:#11182a; --text:#eef2ff; --muted:#a7b0c0;
+      --btn:#2563eb; --btn2:#16a34a; --stroke:rgba(255,255,255,.08);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family: ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      background: radial-gradient(1000px 600px at 50% -10%, rgba(37,99,235,.35), transparent),
+                  radial-gradient(900px 500px at 90% 20%, rgba(22,163,74,.25), transparent),
+                  var(--bg);
+      color:var(--text);
+      min-height:100vh;
+      display:flex; align-items:center; justify-content:center;
+      padding:24px;
+    }
+    .wrap{width:100%; max-width:520px;}
+    .card{
+      background: linear-gradient(180deg, rgba(17,24,42,.92), rgba(17,24,42,.75));
+      border:1px solid var(--stroke);
+      border-radius:20px;
+      padding:22px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.45);
+      backdrop-filter: blur(8px);
+    }
+    .brand{display:flex; gap:14px; align-items:center; margin-bottom:14px;}
+    .logo{
+      width:54px; height:54px; border-radius:16px;
+      background: rgba(255,255,255,.06);
+      border:1px solid var(--stroke);
+      display:grid; place-items:center;
+      font-weight:800; letter-spacing:.5px;
+    }
+    h1{font-size:22px; margin:0;}
+    p{margin:6px 0 0; color:var(--muted); font-size:14px; line-height:1.35;}
+    .btns{display:flex; flex-direction:column; gap:12px; margin-top:18px;}
+    a.btn{
+      text-decoration:none; color:white; font-weight:700;
+      padding:14px 14px;
+      border-radius:14px;
+      border:1px solid var(--stroke);
+      display:flex; justify-content:space-between; align-items:center;
+      transition: transform .08s ease, filter .08s ease;
+    }
+    a.btn:hover{transform: translateY(-1px); filter: brightness(1.03);}
+    .wa{background: linear-gradient(135deg, var(--btn2), #22c55e);}
+    .ig{background: linear-gradient(135deg, #9333ea, #ec4899);}
+    .g{background: linear-gradient(135deg, var(--btn), #60a5fa);}
+    .maps{background: linear-gradient(135deg, #0ea5e9, #22c55e);}
+    .arrow{opacity:.9}
+    .footer{margin-top:14px; text-align:center; color:var(--muted); font-size:12px;}
+    .small{opacity:.9}
+    .pill{
+      display:inline-block; padding:6px 10px; border-radius:999px;
+      border:1px solid var(--stroke); background: rgba(255,255,255,.04);
+      margin-top:10px; font-size:12px; color:var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="brand">
+        <div class="logo">BJ</div>
+        <div>
+          <h1>Bordados Jehani</h1>
+          <p>Bordados personalizados · Bogotá (Bosa)</p>
+          <div class="pill">WhatsApp: +57 322 280 5203</div>
+        </div>
+      </div>
+
+      <div class="btns">
+        <a class="btn wa" href="https://wa.me/573222805203?text=Hola%20Bordados%20Jehani%2C%20quiero%20cotizar.%20Tipo%20de%20prenda%3A%20____%20Tama%C3%B1o%3A%20____%20Cantidad%3A%20____" target="_blank" rel="noopener">
+          Cotizar por WhatsApp <span class="arrow">➜</span>
+        </a>
+
+        <!-- Reemplaza # por tu link real de reseñas -->
+        <a class="btn g" href="#" target="_blank" rel="noopener">
+          Dejar reseña en Google <span class="arrow">➜</span>
+        </a>
+
+        <a class="btn ig" href="https://www.instagram.com/bordados_jehani/" target="_blank" rel="noopener">
+          Ver trabajos en Instagram <span class="arrow">➜</span>
+        </a>
+
+        <!-- Reemplaza # por tu link real de Google Maps -->
+        <a class="btn maps" href="#" target="_blank" rel="noopener">
+          Cómo llegar (Maps) <span class="arrow">➜</span>
+        </a>
+      </div>
+
+      <div class="footer">
+        <div class="small">Cra. 77J Sur #65J-93 · Bosa San Pablo, Bogotá</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
