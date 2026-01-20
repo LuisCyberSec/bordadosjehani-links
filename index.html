@@ -4,102 +4,234 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Bordados Jehani | Enlaces</title>
-  <meta name="description" content="Bordados Jehani: WhatsApp, reseñas, Instagram y ubicación." />
+  <meta name="description" content="Bordados Jehani: cotiza por WhatsApp, mira trabajos en Instagram, reseñas y ubicación." />
+
+  <!-- Apariencia en móvil -->
+  <meta name="theme-color" content="#0b0f19" />
+
+  <!-- Open Graph (para que se vea bonito al compartir) -->
+  <meta property="og:title" content="Bordados Jehani | Enlaces" />
+  <meta property="og:description" content="Cotiza por WhatsApp, mira trabajos y encuentra cómo llegar." />
+  <meta property="og:type" content="website" />
+
   <style>
     :root{
-      --bg:#0b0f19; --card:#11182a; --text:#eef2ff; --muted:#a7b0c0;
-      --btn:#2563eb; --btn2:#16a34a; --stroke:rgba(255,255,255,.08);
+      --bg:#0b0f19;
+      --card:#11182a;
+      --text:#eef2ff;
+      --muted:#a7b0c0;
+      --stroke:rgba(255,255,255,.10);
+
+      /* Marca (sobria) */
+      --wa:#16a34a;
+      --wa2:#22c55e;
+
+      --accent:#8b5cf6; /* apoyo para IG */
+      --neutral:#1a2338; /* botones secundarios */
+      --neutral2:#24314e;
+
+      --shadow: 0 18px 60px rgba(0,0,0,.50);
+      --radius: 20px;
     }
+
     *{box-sizing:border-box}
     body{
-      margin:0; font-family: ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
-      background: radial-gradient(1000px 600px at 50% -10%, rgba(37,99,235,.35), transparent),
-                  radial-gradient(900px 500px at 90% 20%, rgba(22,163,74,.25), transparent),
-                  var(--bg);
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background:
+        radial-gradient(900px 600px at 50% -10%, rgba(22,163,74,.22), transparent),
+        radial-gradient(900px 600px at 90% 20%, rgba(139,92,246,.16), transparent),
+        var(--bg);
       color:var(--text);
       min-height:100vh;
-      display:flex; align-items:center; justify-content:center;
+      display:flex;
+      align-items:center;
+      justify-content:center;
       padding:24px;
     }
-    .wrap{width:100%; max-width:520px;}
+
+    .wrap{width:100%; max-width:540px;}
+
     .card{
-      background: linear-gradient(180deg, rgba(17,24,42,.92), rgba(17,24,42,.75));
+      background: linear-gradient(180deg, rgba(17,24,42,.92), rgba(17,24,42,.78));
       border:1px solid var(--stroke);
-      border-radius:20px;
+      border-radius: var(--radius);
       padding:22px;
-      box-shadow: 0 20px 60px rgba(0,0,0,.45);
+      box-shadow: var(--shadow);
       backdrop-filter: blur(8px);
     }
-    .brand{display:flex; gap:14px; align-items:center; margin-bottom:14px;}
+
+    .brand{
+      display:flex;
+      gap:14px;
+      align-items:center;
+      margin-bottom:14px;
+    }
+
     .logo{
-      width:54px; height:54px; border-radius:16px;
+      width:56px;
+      height:56px;
+      border-radius:16px;
       background: rgba(255,255,255,.06);
       border:1px solid var(--stroke);
-      display:grid; place-items:center;
-      font-weight:800; letter-spacing:.5px;
+      display:grid;
+      place-items:center;
+      font-weight:900;
+      letter-spacing:.6px;
     }
-    h1{font-size:22px; margin:0;}
+
+    h1{font-size:22px; margin:0; line-height:1.1;}
     p{margin:6px 0 0; color:var(--muted); font-size:14px; line-height:1.35;}
-    .btns{display:flex; flex-direction:column; gap:12px; margin-top:18px;}
-    a.btn{
-      text-decoration:none; color:white; font-weight:700;
-      padding:14px 14px;
-      border-radius:14px;
+
+    .badges{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:10px;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:6px;
+      padding:6px 10px;
+      border-radius:999px;
       border:1px solid var(--stroke);
-      display:flex; justify-content:space-between; align-items:center;
-      transition: transform .08s ease, filter .08s ease;
+      background: rgba(255,255,255,.04);
+      font-size:12px;
+      color:var(--muted);
+      white-space:nowrap;
+    }
+
+    .btns{display:flex; flex-direction:column; gap:12px; margin-top:18px;}
+
+    a.btn{
+      text-decoration:none;
+      color:white;
+      font-weight:800;
+      padding:14px 14px;
+      border-radius:16px;
+      border:1px solid var(--stroke);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      transition: transform .08s ease, filter .08s ease, border-color .15s ease;
+      outline:none;
     }
     a.btn:hover{transform: translateY(-1px); filter: brightness(1.03);}
-    .wa{background: linear-gradient(135deg, var(--btn2), #22c55e);}
+    a.btn:focus-visible{border-color: rgba(255,255,255,.35);}
+
+    /* Botón principal */
+    .wa{background: linear-gradient(135deg, var(--wa), var(--wa2));}
+
+    /* Secundario marca (IG) */
     .ig{background: linear-gradient(135deg, #9333ea, #ec4899);}
-    .g{background: linear-gradient(135deg, var(--btn), #60a5fa);}
-    .maps{background: linear-gradient(135deg, #0ea5e9, #22c55e);}
-    .arrow{opacity:.9}
-    .footer{margin-top:14px; text-align:center; color:var(--muted); font-size:12px;}
-    .small{opacity:.9}
-    .pill{
-      display:inline-block; padding:6px 10px; border-radius:999px;
-      border:1px solid var(--stroke); background: rgba(255,255,255,.04);
-      margin-top:10px; font-size:12px; color:var(--muted);
+
+    /* Neutros pro */
+    .neutral{
+      background: linear-gradient(180deg, var(--neutral), var(--neutral2));
+      color: #f3f6ff;
     }
+
+    .left{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .icon{
+      width:20px;
+      height:20px;
+      opacity:.95;
+      flex:0 0 auto;
+    }
+    .arrow{
+      opacity:.9;
+      font-weight:900;
+    }
+
+    .footer{
+      margin-top:14px;
+      text-align:center;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.35;
+    }
+    .small{opacity:.92}
   </style>
 </head>
+
 <body>
   <div class="wrap">
     <div class="card">
       <div class="brand">
-        <div class="logo">BJ</div>
+        <div class="logo" aria-label="Bordados Jehani">BJ</div>
         <div>
           <h1>Bordados Jehani</h1>
           <p>Bordados personalizados · Bogotá (Bosa)</p>
-          <div class="pill">WhatsApp: +57 319 705 8996</div>
+
+          <div class="badges">
+            <span class="pill">📍 Bosa San Pablo</span>
+            <span class="pill">🧵 Cotiza en 2 minutos</span>
+            <span class="pill">WhatsApp: 319 705 8996</span>
+          </div>
         </div>
       </div>
 
       <div class="btns">
-        <a class="btn wa" href="https://wa.me/573197058996?text=Hola%2C%20buen%20d%C3%ADa.%20Me%20gustar%C3%ADa%20cotizar%20un%20bordado%2C%20por%20favor.">
-          Cotizar por WhatsApp <span class="arrow">➜</span>
+        <!-- WhatsApp (principal) -->
+        <a class="btn wa"
+           href="https://wa.me/573197058996?text=Hola%2C%20buen%20d%C3%ADa.%20Me%20gustar%C3%ADa%20cotizar%20un%20bordado.%20%0A%0A1)%20Prenda%3A%20%0A2)%20Tama%C3%B1o%20cm%3A%20%0A3)%20Cantidad%3A%20%0A4)%20Ubicaci%C3%B3n%3A%20%0A5)%20Foto%20o%20logo%3A%20"
+           aria-label="Cotizar por WhatsApp">
+          <span class="left">
+            <span class="icon">💬</span>
+            Cotizar por WhatsApp
+          </span>
+          <span class="arrow">➜</span>
         </a>
 
-        <!-- Reemplaza # por tu link real de reseñas -->
-        <a class="btn g" href="#" target="_blank" rel="noopener">
-          Dejar reseña en Google <span class="arrow">➜</span>
+        <!-- Instagram (secundario) -->
+        <a class="btn ig"
+           href="https://www.instagram.com/bordados_jehani/?utm_source=links&utm_medium=landing&utm_campaign=ig"
+           target="_blank" rel="noopener"
+           aria-label="Ver trabajos en Instagram">
+          <span class="left">
+            <span class="icon">📸</span>
+            Ver trabajos en Instagram
+          </span>
+          <span class="arrow">➜</span>
         </a>
 
-        <a class="btn ig" href="https://www.instagram.com/bordados_jehani/" target="_blank" rel="noopener">
-          Ver trabajos en Instagram <span class="arrow">➜</span>
+        <!-- Reseñas (neutral, pero importante) -->
+        <!-- Reemplaza el href por tu link real de reseñas -->
+        <a class="btn neutral"
+           href="PON_AQUI_TU_LINK_DE_RESEÑAS"
+           target="_blank" rel="noopener"
+           aria-label="Dejar reseña en Google">
+          <span class="left">
+            <span class="icon">⭐</span>
+            Dejar reseña en Google
+          </span>
+          <span class="arrow">➜</span>
         </a>
 
-        <!-- Reemplaza # por tu link real de Google Maps -->
-         <a class="btn maps" href="https://maps.app.goo.gl/m3RRFgmFAzDCpbCo7" target="_blank" rel="noopener">
-           Cómo llegar (Maps) <span class="arrow">➜</span>
-          </a>
+        <!-- Maps (neutral) -->
+        <a class="btn neutral"
+           href="https://maps.app.goo.gl/m3RRFgmFAzDCpbCo7?utm_source=links&utm_medium=landing&utm_campaign=maps"
+           target="_blank" rel="noopener"
+           aria-label="Cómo llegar en Google Maps">
+          <span class="left">
+            <span class="icon">📍</span>
+            Cómo llegar (Maps)
+          </span>
+          <span class="arrow">➜</span>
+        </a>
       </div>
 
       <div class="footer">
         <div class="small">Cra. 77J Sur #65J-93 · Bosa San Pablo, Bogotá</div>
+        <div class="small">links.bordadosjehani.com</div>
       </div>
     </div>
   </div>
 </body>
 </html>
+
