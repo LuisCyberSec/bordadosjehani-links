@@ -249,21 +249,34 @@
 
       <div class="footer">
         <div class="small">Cra. 77J Sur #65J-93 · Bosa San Pablo, Bogotá</div>
-        <div class="small">info@bordadosjehani.com</div>
+          <div class="small">
+            <a href="mailto:info@bordadosjehani.com" style="color:inherit; text-decoration:none;">
+                info@bordadosjehani.com
+             </a>
+          </div>
       </div>
     </div>
   </div>
 
 
 <script>
+  // Evita errores si GA no está listo
+  function trackClick(cta, href, label) {
+    if (typeof gtag === 'function') {
+      gtag('event', 'click_boton', {
+        event_category: 'links_page',
+        cta: cta || 'unknown',
+        link_url: href || '',
+        label: label || ''
+      });
+    }
+  }
+
   document.querySelectorAll('a.btn').forEach((a) => {
     a.addEventListener('click', () => {
       const cta = a.dataset.cta || 'unknown';
-      gtag('event', 'click_boton', {
-        event_category: 'links_page',
-        cta: cta,
-        link_url: a.href
-      });
+      const label = a.textContent.trim().replace(/\s+/g, ' ');
+      trackClick(cta, a.href, label);
     });
   });
 </script>
