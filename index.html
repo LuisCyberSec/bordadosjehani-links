@@ -156,6 +156,65 @@
       line-height:1.35;
     }
     .small{opacity:.92}
+
+
+
+    <style>
+  /* --- Fondo bordado sutil --- */
+  body::before{
+    content:"";
+    position:fixed;
+    inset:-20%;
+    z-index:-2;
+    background:
+      radial-gradient(900px 600px at 50% -10%, rgba(22,163,74,.22), transparent),
+      radial-gradient(900px 600px at 90% 20%, rgba(139,92,246,.16), transparent),
+      radial-gradient(700px 500px at 10% 10%, rgba(96,165,250,.10), transparent),
+      #0b0f19;
+    filter:saturate(1.05);
+  }
+
+  /* Capa de “hilos” (líneas finas) */
+  body::after{
+    content:"";
+    position:fixed;
+    inset:-40%;
+    z-index:-1;
+    pointer-events:none;
+    opacity:.22;
+    background:
+      repeating-linear-gradient(
+        125deg,
+        rgba(255,255,255,.10) 0px,
+        rgba(255,255,255,.10) 1px,
+        rgba(255,255,255,0) 6px,
+        rgba(255,255,255,0) 14px
+      ),
+      repeating-linear-gradient(
+        55deg,
+        rgba(34,197,94,.10) 0px,
+        rgba(34,197,94,.10) 1px,
+        rgba(0,0,0,0) 8px,
+        rgba(0,0,0,0) 18px
+      );
+    mix-blend-mode: screen;
+    animation: threadDrift 16s ease-in-out infinite;
+    transform: translate3d(0,0,0);
+  }
+
+  @keyframes threadDrift{
+    0%   { transform: translate(-2%, -1%) rotate(0.4deg); }
+    50%  { transform: translate( 2%,  1%) rotate(-0.4deg); }
+    100% { transform: translate(-2%, -1%) rotate(0.4deg); }
+  }
+
+  /* Respeta accesibilidad */
+  @media (prefers-reduced-motion: reduce){
+    body::after{ animation:none; }
+  }
+</style>
+
+    
   </style>
 
 
