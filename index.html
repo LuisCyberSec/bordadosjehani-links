@@ -195,7 +195,8 @@
 
       <div class="btns">
         <!-- WhatsApp (principal) -->
-        <a class="btn wa"
+        <a class="btn wa" 
+          data-cta="whatsapp"
            href="https://wa.me/573197058996?text=Hola%2C%20buen%20d%C3%ADa.%20Me%20gustar%C3%ADa%20cotizar%20un%20bordado.%20%0A%0A1)%20Prenda%3A%20%0A2)%20Tama%C3%B1o%20cm%3A%20%0A3)%20Cantidad%3A%20%0A4)%20Ubicaci%C3%B3n%3A%20%0A5)%20Foto%20o%20logo%3A%20"
            aria-label="Cotizar por WhatsApp">
           <span class="left">
@@ -206,7 +207,8 @@
         </a>
 
         <!-- Instagram (secundario) -->
-        <a class="btn ig"
+        <a class="btn ig" 
+          data-cta="instagram"
            href="https://www.instagram.com/bordados_jehani/?utm_source=links&utm_medium=landing&utm_campaign=ig"
            target="_blank" rel="noopener"
            aria-label="Ver trabajos en Instagram">
@@ -220,6 +222,7 @@
         <!-- Reseñas (neutral, pero importante) -->
         <!-- Reemplaza el href por tu link real de reseñas -->
         <a class="btn neutral"
+          data-cta="google_review"
            href="PON_AQUI_TU_LINK_DE_RESEÑAS"
            target="_blank" rel="noopener"
            aria-label="Dejar reseña en Google">
@@ -232,6 +235,7 @@
 
         <!-- Maps (neutral) -->
         <a class="btn neutral"
+          data-cta="maps"
            href="https://maps.app.goo.gl/m3RRFgmFAzDCpbCo7?utm_source=links&utm_medium=landing&utm_campaign=maps"
            target="_blank" rel="noopener"
            aria-label="Cómo llegar en Google Maps">
@@ -254,10 +258,10 @@
 <script>
   document.querySelectorAll('a.btn').forEach((a) => {
     a.addEventListener('click', () => {
-      const label = a.textContent.trim().replace(/\s+/g,' ');
+      const cta = a.dataset.cta || 'unknown';
       gtag('event', 'click_boton', {
         event_category: 'links_page',
-        event_label: label,
+        cta: cta,
         link_url: a.href
       });
     });
